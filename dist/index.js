@@ -1455,9 +1455,6 @@ for (const version of allPyPyVersions) {
     const root = tool_cache_1.find("PyPy", version);
     console.log(root);
     core_1.addPath(`${root}/bin`);
-    if (/2\./.exec(version)) {
-        fs_1.symlinkSync(`${root}/bin/pypy`, `${root}/bin/pypy2`);
-    }
 }
 for (const version of allCPythonVersions) {
     console.log(version);
